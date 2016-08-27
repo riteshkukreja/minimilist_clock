@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clock</title>
+	<style type="text/css">
+		body, html {
+			margin: 0;
+			background: #444;
+		}
+		svg {
+			position: absolute;
+			top: calc(50% - 100px);
+			left: calc(50% - 100px);
+		}
+		line {
+			stroke: #999;
+			transform-origin: 0% 100%;
+			transition: all 200ms linear;
+		}
+	</style>
+	<script type="text/javascript" src="script/Clock.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			new Clock();
+		}
+	</script>
+</head>
+<body>
+
+	<svg width="200" height="200">
+		<circle cx="100" cy="100" r="80" stroke="#999" stroke-dasharray="10" 
+				stroke-width="10" fill="#444" />
+		<circle cx="100" cy="100" r="10" fill="#999" />
+
+		<line id="hourhand" x1="100" y1="100" x2="100" y2="20" style="stroke-width: 10px" />
+		<line id="minutehand" x1="100" y1="100" x2="100" y2="20" style="stroke-width: 6px;" />
+		<line id="secondhand" x1="100" y1="100" x2="100" y2="20" style="stroke-width: 3px;" />
+	</svg>
+
+</body>
+</html>
